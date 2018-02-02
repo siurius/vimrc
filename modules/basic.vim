@@ -1,6 +1,12 @@
+scriptencoding utf-8
+"
+" Author: Yiran Li <yiranli91@gmail.com>
+" Source: https://github.com/siurius/vimrc
+" 
+" basic.vim: minimal acceptable git configuration without any heavy plugins
+
 " Basic options {{{
 
-scriptencoding utf-8
 set encoding=utf-8              " setup the encoding to UTF-8
 set ls=2                        " status line always visible
 set go-=T                       " hide the toolbar
@@ -23,6 +29,9 @@ set ttimeoutlen=0               " toggle between modes almost instantly
 set backspace=indent,eol,start  " defines the backspace key behavior
 set virtualedit=all             " to edit where there is no actual character
 set scrolloff=7                 " buffer when scrolling
+
+let mapleader=','
+let maplocalleader= ' '
 
 " Never goback to compatible mode
 nnoremap Q <nop>
@@ -144,14 +153,7 @@ nmap <silent><Leader>ew :call ToggleWrap()<CR>
 
 " Colorscheme {{{
 
-syntax enable                  " enable the syntax highlight
-set background=dark            " set a dark background
-set t_Co=256                   " 256 colors for the terminal
-if has('gui_running')
-    colorscheme molokai
-else
-    colorscheme molokai256
-endif
+color peachpuff
 
 " }}}
 
@@ -206,9 +208,6 @@ set noea
 " map <C-w><C-w> to maximize current window vertically
 noremap <C-w><C-w> <C-w>1000+
 
-" change current line highlighter
-hi clear CursorLine
-hi CursorLine ctermbg=Black
 
 set number
 set relativenumber
@@ -243,10 +242,3 @@ endif
 
 " }}}
 
-augroup DimInactiveWindows
-  au!
-  "au WinEnter * call s:DimInactiveWindows()
-  "au WinEnter * call s:SetCurrentWindow()
-  au WinEnter * set cursorline
-  au WinLeave * set nocursorline
-augroup END
