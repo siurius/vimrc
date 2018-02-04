@@ -7,6 +7,14 @@ Vim configuration.
 2. `:PlugInstall`
 3. Restart vim
 
+## Commands
+
+| Command                              | Description              | Plugin   |
+| :----------------------------------- | :----------------------- | :------- |
+| `:PlugInstall [name ...] [#threads]` | Install plugins          | vim-plug |
+| `:PlugUpdate [name ...] [#threads]`  | Install / update plugins | vim-plug |
+| `:PlugUpgrade`                       | Upgrde vim-plug itself   | vim-plug |
+
 ## Minimal configuration
 
 ## Complete configuration
