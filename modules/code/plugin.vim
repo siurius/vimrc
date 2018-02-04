@@ -6,4 +6,4 @@
 
 scriptencoding utf-8
 
-
+Plug 'w0rp/ale'

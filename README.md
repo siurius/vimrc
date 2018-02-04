@@ -1,6 +1,16 @@
 # vimrc
 Vim configuration.
 
+## Preparation
+
+### ALE
+
+ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim and Vim 8 while editing.
+
+- Python
+    - linter: pylint, flake8
+    - fixer: autopep8, yapf
+
 ## Setup
 
 1. Adds link from `.vimrc` to this folder
