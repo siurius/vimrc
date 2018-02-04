@@ -242,3 +242,7 @@ endif
 
 " }}}
 
+" Show hidden chars
+nmap <Leader>eh :set list!<CR>
+set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+

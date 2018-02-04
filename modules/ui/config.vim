@@ -2,7 +2,7 @@
 " Author: Yiran Li <yiranli91@gmail.com>
 " Source: https://github.com/siurius/vimrc
 " 
-" ui.vim: user interface
+" ui: user interface
 
 scriptencoding utf-8
 

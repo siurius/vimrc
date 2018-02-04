@@ -4,7 +4,8 @@ Vim configuration.
 ## Setup
 
 1. Adds link from `.vimrc` to this folder
-2. `:PlugInstall`
+2. `:PlugInstall`, then
+    - YouCompleteMe
 3. Restart vim
 
 ## Commands
