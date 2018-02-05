@@ -12,3 +12,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 " ctrlsf, An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2 
 Plug 'dyng/ctrlsf.vim'
+" fzf, command-line fuzzy finder. Install it to system before use it
+Plug '/usr/bin/fzf'
+Plug 'junegunn/fzf.vim'

@@ -37,3 +37,6 @@ augroup DimInactiveWindows
   au WinEnter * set cursorline
   au WinLeave * set nocursorline
 augroup END
+
+" rainbow parentheses
+let g:rainbow_active = 1

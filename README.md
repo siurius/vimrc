@@ -8,8 +8,12 @@ Vim configuration.
 ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim and Vim 8 while editing.
 
 - Python
-    - linter: pylint, flake8
-    - fixer: autopep8, yapf
+    - linter: `pylint`, `flake8`
+    - fixer: `autopep8`, `yapf`
+
+### fzf
+
+Requires `fzf` in the system.
 
 ## Setup
 
@@ -34,3 +38,4 @@ ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim and V
 ## TODO
 
 1. Merge multiple files and create `view`
+2. Adds incsearch

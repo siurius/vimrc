@@ -12,3 +12,5 @@ Plug 'tomasr/molokai'
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" rainbow parentheses
+Plug 'luochen1990/rainbow'

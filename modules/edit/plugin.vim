@@ -6,4 +6,11 @@
 
 scriptencoding utf-8
 
+" auto pair
+Plug 'jiangmiao/auto-pairs'
+" better <dot>
+Plug 'tpope/vim-repeat'
+" easymotion, improved search
+Plug 'easymotion/vim-easymotion'
+
 
