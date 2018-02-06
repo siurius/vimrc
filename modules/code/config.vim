@@ -18,5 +18,9 @@ let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
-nmap <c-k> <Plug>(ale_previous_wrap)
-nmap <c-j> <Plug>(ale_next_wrap)
+nmap k <Plug>(ale_previous_wrap)
+nmap j <Plug>(ale_next_wrap)
+let g:ale_pattern_options = {
+\   '.*\.tex$': {'ale_enabled': 0},
+\}
+

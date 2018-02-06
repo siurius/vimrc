@@ -6,6 +6,8 @@
 
 scriptencoding utf-8
 
+" find project root
+Plug 'dbakker/vim-projectroot'
 " File navigation
 Plug 'scrooloose/nerdtree'
 " Classes and variables
@@ -15,3 +17,5 @@ Plug 'dyng/ctrlsf.vim'
 " fzf, command-line fuzzy finder. Install it to system before use it
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
+" show git status
+Plug 'airblade/vim-gitgutter'
