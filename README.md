@@ -15,11 +15,19 @@ ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim and V
 
 Requires `fzf` in the system.
 
+### YouCompleteMe
+
+- Global
+    - libtinfo
+- Golang
+    - Go
+
+
 ## Setup
 
 1. Adds link from `.vimrc` to this folder
 2. `:PlugInstall`, then
-    - YouCompleteMe
+    - YouCompleteMe: in root folder `./install.py --clang-completer --go-completer`
 3. Restart vim
 
 ## Commands

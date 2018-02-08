@@ -10,7 +10,8 @@ scriptencoding utf-8
 " nothing
 
 " NERDTree
-map <silent> <F2> :NERDTreeToggle<CR>
+" executes toggle at root folder
+map <silent> <F2> :ProjectRootExe NERDTreeToggle<CR>
 let g:NERDTree_title = "[NERDTree]"
 
 " TagBar
