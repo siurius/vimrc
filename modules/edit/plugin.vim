@@ -12,5 +12,5 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
 " easymotion, improved search
 Plug 'easymotion/vim-easymotion'
-
-
+" multiple cursors
+Plug 'terryma/vim-multiple-cursors'
