@@ -14,3 +14,5 @@ Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
+" show marks
+Plug 'kshenoy/vim-signature'
