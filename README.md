@@ -25,10 +25,12 @@ Requires `fzf` in the system.
 
 ## Setup
 
-1. Adds link from `.vimrc` to this folder
-2. `:PlugInstall`, then
+1. Adds link from `~/.vim` to this folder and `~/.vimrc` to `dotvimrc`
+2. Change `$VIMRC_DIR` in `dotvimrc` to the path of this folder
+3. `:PlugInstall`, then
     - YouCompleteMe: in root folder `./install.py --clang-completer --go-completer`
-3. Restart vim
+    - Eclim
+4. Restart vim
 
 ## Commands
 
@@ -40,8 +42,14 @@ Requires `fzf` in the system.
 
 ## Minimal configuration
 
+In `dotvimrc`, change `g:vimrc_modules` to empty.
+
 ## Complete configuration
 
+In `dotvimrc`, write
+```vimrc
+let g:vimrc_modules=['ui', 'tool', 'code', 'edit']
+```
 
 ## TODO
 

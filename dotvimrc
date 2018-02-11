@@ -1,0 +1,7 @@
+let $VIMRC_DIR=$HOME."/source/vimrc"
+let &runtimepath=substitute(&runtimepath, '^', $VIMRC_DIR.",", 'g')
+
+" Select the packages you need
+let g:vimrc_modules=['ui', 'tool', 'code', 'edit']
+
+exec ':so ' $VIMRC_DIR."/vimrc"
