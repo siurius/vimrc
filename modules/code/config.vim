@@ -7,6 +7,9 @@
 scriptencoding utf-8
 
 " ALE
+let g:ale_linters = {
+\   'haskell': ['ghc'],
+\}
 let g:ale_fixers = {
 \   'python': ['autopep8', 'yapf'],
 \}
@@ -42,7 +45,10 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_blacklist = { 'python' : 1  }
 " Haskell
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
+" Codi
+nnoremap <leader>c :Codi!!<CR>

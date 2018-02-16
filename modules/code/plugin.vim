@@ -10,3 +10,13 @@ scriptencoding utf-8
 Plug 'w0rp/ale'
 " YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
+" Codi, scratchpad
+Plug 'metakirby5/codi.vim'
+" vimproc, asynchronous execution library required by ghc-mod.vim
+Plug 'Shougo/vimproc.vim'
+"" ghc-mod
+"Plug 'eagletmt/ghcmod-vim'
+" haskell tagbar
+Plug 'bitc/lushtags'
+" haskell completion
+Plug 'eagletmt/neco-ghc'

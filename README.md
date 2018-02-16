@@ -22,6 +22,11 @@ Requires `fzf` in the system.
 - Golang
     - Go
 
+### haskell related
+
+- ghc-mod
+- hlint
+- lushtags
 
 ## Setup
 
@@ -30,6 +35,7 @@ Requires `fzf` in the system.
 3. `:PlugInstall`, then
     - YouCompleteMe: in root folder `./install.py --clang-completer --go-completer`
     - Eclim
+    - vimproc: in plugin's root folder `make`
 4. Restart vim
 
 ## Commands
@@ -51,7 +57,16 @@ In `dotvimrc`, write
 let g:vimrc_modules=['ui', 'tool', 'code', 'edit']
 ```
 
+## Trouble shooting
+
+### Haskell `The IO action ‘main’ is not defined in module ‘Main’`
+
+See [this issue][haskell-main-not-defined]. Simple add `main = undefined` at the begining.
+
+[haskell-main-not-defined]: https://github.com/DanielG/ghc-mod/issues/781
+
 ## TODO
 
 1. Merge multiple files and create `view`
 2. Adds incsearch
+3. Haskell auto completion function, instead of just with `.`
