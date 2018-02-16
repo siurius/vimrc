@@ -22,9 +22,10 @@ Requires `fzf` in the system.
 - Golang
     - Go
 
-### haskell related
+### Haskell support
 
 - ghc-mod
+- hfmt
 - hlint
 - lushtags
 
@@ -59,7 +60,7 @@ let g:vimrc_modules=['ui', 'tool', 'code', 'edit']
 
 ## Trouble shooting
 
-### Haskell `The IO action ‘main’ is not defined in module ‘Main’`
+- Haskell, `The IO action ‘main’ is not defined in module ‘Main’`
 
 See [this issue][haskell-main-not-defined]. Simple add `main = undefined` at the begining.
 
@@ -69,4 +70,4 @@ See [this issue][haskell-main-not-defined]. Simple add `main = undefined` at the
 
 1. Merge multiple files and create `view`
 2. Adds incsearch
-3. Haskell auto completion function, instead of just with `.`
+3. Lisp support

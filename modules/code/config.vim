@@ -8,10 +8,11 @@ scriptencoding utf-8
 
 " ALE
 let g:ale_linters = {
-\   'haskell': ['ghc'],
+\   'haskell': ['ghc', 'hlint'],
 \}
 let g:ale_fixers = {
 \   'python': ['autopep8', 'yapf'],
+\   'haskell': ['hfmt'],
 \}
 " auto format
 nmap <leader>= :ALEFix<CR>
