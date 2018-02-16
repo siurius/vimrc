@@ -12,10 +12,14 @@ Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
 " Codi, scratchpad
 Plug 'metakirby5/codi.vim'
-" vimproc, asynchronous execution library required by ghc-mod.vim
+" haskell syntx highlight
+Plug 'neovimhaskell/haskell-vim'
+" vimproc, asynchronous execution library required by ghc-mod.vim and neco-ghc
 Plug 'Shougo/vimproc.vim'
 "" ghc-mod
 "Plug 'eagletmt/ghcmod-vim'
+"" better haskell looking
+"Plug 'enomsg/vim-haskellConcealPlus'
 " haskell tagbar
 Plug 'bitc/lushtags'
 " haskell completion

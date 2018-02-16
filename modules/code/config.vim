@@ -43,12 +43,13 @@ nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
 " let g:ycm_filetype_blacklist = { 'python' : 1  }
-" Haskell
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
 " Codi
 nnoremap <leader>c :Codi!!<CR>
+
+" neco-ghc
+let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
