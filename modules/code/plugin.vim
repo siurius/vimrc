@@ -24,3 +24,5 @@ Plug 'Shougo/vimproc.vim'
 Plug 'bitc/lushtags'
 " haskell completion
 Plug 'eagletmt/neco-ghc'
+" vim-slime, select and run
+Plug 'siurius/vim-slime'

@@ -54,3 +54,8 @@ nnoremap <leader>c :Codi!!<CR>
 " neco-ghc
 let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" vim-slime
+let g:slime_target = "vimterminal"
+nmap <leader>s :SlimeToggle<CR>
+let g:slime_vimterminal_config = {"term_rows":"15"}
