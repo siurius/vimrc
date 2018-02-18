@@ -230,7 +230,7 @@ function! s:QuickfixToggle()
 endfunction
 command! ToggleQuickfix call <SID>QuickfixToggle()
 
-nnoremap <silent> <Leader>q :ToggleQuickfix<CR>
+nnoremap <silent> <leader>q :ToggleQuickfix<CR>
 
 " }}}
 
@@ -243,6 +243,6 @@ endif
 " }}}
 
 " Show hidden chars
-nmap <Leader>eh :set list!<CR>
+nmap <leader>eh :set list!<CR>
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 

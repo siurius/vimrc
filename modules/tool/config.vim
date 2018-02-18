@@ -31,7 +31,7 @@ map <F4> :CtrlSF -I<space>
 " fzf
 " automatic path completion
 let g:fzf_action = {
-      \ 'ctrl-s': 'split',
+      \ 'ctrl-l': 'split',
       \ 'ctrl-v': 'vsplit'
       \ }
 nnoremap <leader>f :execute ':FZF '.projectroot#guess()<CR>
@@ -41,3 +41,6 @@ nnoremap <leader>hc :History:<CR>
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
+" AsyncRun
+nmap <leader>r :AsyncRun<space>
+nmap <leader>k :AsyncStop!<CR>
