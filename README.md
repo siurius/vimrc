@@ -42,7 +42,7 @@ Requires `fzf` in the system.
     - vimproc: in plugin's root folder `make`
 4. Restart vim
 
-## Usages
+## Usage
 
 In `modules/basic.vim`
 - `leader`: `,`
@@ -81,9 +81,9 @@ In `modules/basic.vim`
 
 ## Trouble shooting
 
-- Haskell, `The IO action ‘main’ is not defined in module ‘Main’`
+### Haskell, `The IO action ‘main’ is not defined in module ‘Main’`
 
-See [this issue][haskell-main-not-defined]. Simple add `main = undefined` at the begining.
+See [this issue][haskell-main-not-defined]. Simply add `main = undefined` at the begining.
 
 [haskell-main-not-defined]: https://github.com/DanielG/ghc-mod/issues/781
 
