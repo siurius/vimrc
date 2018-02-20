@@ -16,8 +16,6 @@ Plug 'metakirby5/codi.vim'
 Plug 'neovimhaskell/haskell-vim'
 " vimproc, asynchronous execution library required by ghc-mod.vim and neco-ghc
 Plug 'Shougo/vimproc.vim'
-"" ghc-mod
-"Plug 'eagletmt/ghcmod-vim'
 "" better haskell looking
 "Plug 'enomsg/vim-haskellConcealPlus'
 " haskell tagbar

@@ -41,7 +41,7 @@ inoremap <expr><s-tab> pumvisible() ? "\<up>" : "\<s-tab>"
 nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
-" let g:ycm_filetype_blacklist = { 'python' : 1  }
+" let g:ycm_filetype_blacklist = { 'haskell' : 1  }
 
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'
@@ -53,7 +53,8 @@ let g:codi#interpreters = {
             \ }
 
 " neco-ghc
-let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
+" let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " vim-slime
