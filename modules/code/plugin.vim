@@ -26,3 +26,5 @@ Plug 'bitc/lushtags'
 Plug 'eagletmt/neco-ghc'
 " vim-slime, select and run
 Plug 'siurius/vim-slime'
+" haskell API reference
+Plug 'Twinside/vim-hoogle'

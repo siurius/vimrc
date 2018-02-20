@@ -17,9 +17,7 @@ let g:ale_fixers = {
 " auto format
 nmap <leader>= :ALEFix<CR>
 let g:airline#extensions#ale#enabled = 1
-" change ALE sign
-let g:ale_sign_column_always = 1
-let g:ale_set_highlights = 0
+" change ALE sign let g:ale_sign_column_always = 1 let g:ale_set_highlights = 0
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
 nmap k <Plug>(ale_previous_wrap)
@@ -50,6 +48,11 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 " Codi
 nnoremap <leader>c :Codi!!<CR>
+let g:codi#interpreters = {
+            \ 'haskell': {
+            \ 'prompt': '^λ. ',
+            \ },
+            \ }
 
 " neco-ghc
 let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
@@ -59,3 +62,16 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:slime_target = "vimterminal"
 nmap <leader>s :SlimeToggle<CR>
 let g:slime_vimterminal_config = {"term_rows":"15"}
+
+" vim-hoogle
+function! HoogleToggle()
+    if (!exists("s:hoogle_switch")) || (s:hoogle_switch == 0)
+        let s:hoogle_switch = 1
+        execute "Hoogle"
+    else
+        let s:hoogle_switch = 0
+        execute "HoogleClose"
+    endif
+endfunction
+command -bar -nargs=0 HoogleToggle call HoogleToggle()
+nmap <F12> :HoogleToggle<CR>
