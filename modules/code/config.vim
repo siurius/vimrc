@@ -20,8 +20,8 @@ let g:airline#extensions#ale#enabled = 1
 " change ALE sign let g:ale_sign_column_always = 1 let g:ale_set_highlights = 0
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
-nmap k <Plug>(ale_previous_wrap)
-nmap j <Plug>(ale_next_wrap)
+nmap . <Plug>(ale_previous_wrap)
+nmap , <Plug>(ale_next_wrap)
 let g:ale_pattern_options = {
 \   '.*\.tex$': {'ale_enabled': 0},
 \}
@@ -49,9 +49,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 " Codi
 nnoremap <leader>c :Codi!!<CR>
 let g:codi#interpreters = {
-            \ 'haskell': {
-            \ 'prompt': '^λ. ',
-            \ },
+            \ 'haskell': {'prompt': '^λ. '},
             \ }
 
 " neco-ghc

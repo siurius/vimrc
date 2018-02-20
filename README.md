@@ -52,8 +52,8 @@ In `modules/basic.vim`
 | :-------------- | :--------------------------------- | :------------------- |
 | `<leader>eh`    | Toggle hidden characters           |                      |
 | `<leader>q`     | Toggle quickfix window             |                      |
-| `Alt-j`         | Next fix                           | ALE                  |
-| `Alt-k`         | Previous fix                       | ALE                  |
+| `Alt-.`         | Next fix                           | ALE                  |
+| `Alt-,`         | Previous fix                       | ALE                  |
 | `<leader>=`     | Auto format                        | ALE                  |
 | `<leader>r`     | Run async command                  | AsyncRun             |
 | `<leader>k`     | Kill async command                 | AsyncRun             |
@@ -68,6 +68,7 @@ In `modules/basic.vim`
 | `<leader>hf`    | Search history file name           | fzf                  |
 | `<leader>hs`    | Search history search              | fzf                  |
 | `<leader>hc`    | Search history command             | fzf                  |
+| `<F12>`         | Toggle hoogle                      | vim-hoogle           |
 | `Ctrl-m`        | Multi cursor mark                  | vim-multiple-cursors |
 | `Ctrl-]`        | Multi cursor skip                  | vim-multiple-cursors |
 | `Ctrl-[`        | Multi cursor previous              | vim-multiple-cursors |
