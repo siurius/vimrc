@@ -8,6 +8,7 @@ scriptencoding utf-8
 
 " ALE
 let g:ale_linters = {
+\   'python': [],
 \   'haskell': ['ghc', 'hlint'],
 \}
 let g:ale_fixers = {
@@ -42,6 +43,8 @@ nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
 " let g:ycm_filetype_blacklist = { 'haskell' : 1  }
+
+" YCM-Generator
 
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'

@@ -10,6 +10,8 @@ scriptencoding utf-8
 Plug 'w0rp/ale'
 " YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
+" YCM-Generator
+Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 " Codi, scratchpad
 Plug 'metakirby5/codi.vim'
 " haskell syntx highlight
