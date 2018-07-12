@@ -68,6 +68,9 @@ In `modules/basic.vim`
 | `<leader>c`          | Toggle Codi                        | Codi                 |
 | `<F4>`               | Find in project                    | CtrlSF               |
 | `<leader>a`          | Find selected world in project     | CtrlSF               |
+| `Ctrl-o`             | Open in a horizontal split window  | CtrlSF               |
+| `Ctrl-j`             | Move cursor to next match          | CtrlSF               |
+| `Ctrl-k`             | Move cursor to previous match      | CtrlSF               |
 | `Ctrl-x Ctrl-l`      | Complete line                      | fzf                  |
 | `Ctrl-x Ctrl-f`      | Complete path                      | fzf                  |
 | `Ctrl-l`             | Show file in split window          | fzf                  |
