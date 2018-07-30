@@ -19,5 +19,7 @@ Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 " show git status
 Plug 'airblade/vim-gitgutter'
+" more powerful git tool
+Plug 'tpope/vim-fugitive'
 " Run Async Shell Commands
 Plug 'skywind3000/asyncrun.vim'
