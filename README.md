@@ -60,6 +60,7 @@ In `modules/basic.vim`
 | :--------------      | :--------------------------------- | :------------------- |
 | `<leader>eh`         | Toggle hidden characters           |                      |
 | `<leader>q`          | Toggle quickfix window             |                      |
+| `:TC`                | Alias of `:tabclose`               |                      |
 | `Alt-.`              | Next fix                           | ALE                  |
 | `Alt-,`              | Previous fix                       | ALE                  |
 | `<leader>=`          | Auto format                        | ALE                  |
