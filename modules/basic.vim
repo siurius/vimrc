@@ -202,6 +202,14 @@ inoremap <C-x>o <C-o><C-w>w
 inoremap <C-x>+ <C-o><C-w>=
 
 " }}}
+"
+" tab page command {{{
+
+" quick jump
+
+command TC tabclose
+
+" }}}
 
 " change working directory
 set autochdir
