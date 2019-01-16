@@ -44,3 +44,10 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 " AsyncRun
 nmap <leader>r :AsyncRun<space>
 nmap <leader>k :AsyncStop!<CR>
+
+" vim-which-key
+nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey '<Space>'<CR>
+" To register the descriptions when using the on-demand load feature, use the autocmd hook to call which#register(),
+" e.g., register for the Space key(see more configuration details in the following sections):
+" autocmd! User vim-which-key call which#register('<Space>', 'g:which_key_map')

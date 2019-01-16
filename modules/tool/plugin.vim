@@ -23,3 +23,5 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Run Async Shell Commands
 Plug 'skywind3000/asyncrun.vim'
+" show hint of leader-started commands
+Plug 'liuchengxu/vim-which-key'

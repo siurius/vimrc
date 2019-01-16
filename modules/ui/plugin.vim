@@ -15,4 +15,4 @@ Plug 'vim-airline/vim-airline-themes'
 " rainbow parentheses
 Plug 'luochen1990/rainbow'
 " color_coded
-Plug 'jeaye/color_coded'
+" Plug 'jeaye/color_coded' # too slow

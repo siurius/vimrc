@@ -28,3 +28,5 @@ Plug 'eagletmt/neco-ghc'
 Plug 'siurius/vim-slime'
 " haskell API reference
 Plug 'Twinside/vim-hoogle'
+"" TabNine completor
+"Plug 'zxqfl/tabnine-vim'

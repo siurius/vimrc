@@ -31,7 +31,7 @@ set virtualedit=all             " to edit where there is no actual character
 set scrolloff=7                 " buffer when scrolling
 
 let mapleader=','
-let maplocalleader= ' '
+let maplocalleader='\<Space>'
 
 " Never goback to compatible mode
 nnoremap Q <nop>
