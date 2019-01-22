@@ -16,7 +16,7 @@ let g:ale_fixers = {
 \   'haskell': ['hfmt'],
 \}
 " auto format
-nmap <leader>= :ALEFix<CR>
+nnoremap <leader>cf :ALEFix<CR>
 let g:airline#extensions#ale#enabled = 1
 " change ALE sign let g:ale_sign_column_always = 1 let g:ale_set_highlights = 0
 let g:ale_sign_error = '✗'
@@ -26,6 +26,7 @@ nmap . <Plug>(ale_next_wrap)
 let g:ale_pattern_options = {
 \   '.*\.tex$': {'ale_enabled': 0},
 \}
+let g:which_key_map_leader.c.f = 'Auto formatting'
 
 " YouCompleteMe
 let g:ycm_server_keep_logfiles = 1
@@ -39,10 +40,13 @@ let g:ycm_confirm_extra_conf = 0
 inoremap <expr><tab>   pumvisible() ? "\<down>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<up>" : "\<s-tab>"
 " YcmCompleter
-nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_key_detailed_diagnostics = '<leader>cd'
+nnoremap <leader>cg  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
 " let g:ycm_filetype_blacklist = { 'haskell' : 1  }
+let g:which_key_map_leader.c.d = 'Show detailed diagnostics'
+let g:which_key_map_leader.c.g = 'Goto def. else dec.'
 
 " YCM-Generator
 
@@ -50,10 +54,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:EclimCompletionMethod = 'omnifunc'
 
 " Codi
-nnoremap <leader>c :Codi!!<CR>
+nnoremap <leader>rc :Codi!!<CR>
 let g:codi#interpreters = {
             \ 'haskell': {'prompt': '^λ. '},
             \ }
+let g:which_key_map_leader.r.c = 'Codi (haskell)'
 
 " neco-ghc
 " let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
@@ -62,8 +67,9 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " vim-slime
 let g:slime_target = "vimterminal"
-nmap <leader>s :SlimeToggle<CR>
+nmap <leader>rs :SlimeToggle<CR>
 let g:slime_vimterminal_config = {"term_rows":"15"}
+let g:which_key_map_leader.r.s = 'Slime'
 
 " vim-hoogle
 function! HoogleToggle()

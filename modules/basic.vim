@@ -31,7 +31,13 @@ set virtualedit=all             " to edit where there is no actual character
 set scrolloff=7                 " buffer when scrolling
 
 let mapleader=','
-let maplocalleader='\<Space>'
+let maplocalleader=' '
+
+let g:which_key_map_leader = {}
+let g:which_key_map_leader.c = { 'name' : '+coding' }
+let g:which_key_map_leader.e = { 'name' : '+enable-disable' }
+let g:which_key_map_leader.h = { 'name' : '+search-history' }
+let g:which_key_map_leader.r = { 'name' : '+repl-execute' }
 
 " Never goback to compatible mode
 nnoremap Q <nop>
@@ -109,31 +115,32 @@ set autoindent                 " set on the auto-indent
 set textwidth=0
 " set colorcolumn=81
 
-function! ToggleWrap()
-    let s:nowrap_cc_bg = [22, '#005f00']
-    redir => s:curr_cc_hi
-    silent hi ColorColumn
-    redir END
-    let s:curr_cc_ctermbg = matchstr(s:curr_cc_hi, 'ctermbg=\zs.\{-}\s\ze\1')
-    let s:curr_cc_guibg = matchstr(s:curr_cc_hi, 'guibg=\zs.\{-}\_$\ze\1')
-    if s:curr_cc_ctermbg != s:nowrap_cc_bg[0]
-        let g:curr_cc_ctermbg = s:curr_cc_ctermbg
-    endif
-    if s:curr_cc_guibg != s:nowrap_cc_bg[1]
-        let g:curr_cc_guibg = s:curr_cc_guibg
-    endif
-    if &textwidth == 80
-        set textwidth=0
-        exec 'hi ColorColumn ctermbg='.s:nowrap_cc_bg[0].
-                    \' guibg='.s:nowrap_cc_bg[1]
-    elseif &textwidth == 0
-        set textwidth=80
-        exec 'hi ColorColumn ctermbg='.g:curr_cc_ctermbg.
-                    \' guibg='.g:curr_cc_guibg
-    endif
-endfunction
-
-nmap <silent><Leader>ew :call ToggleWrap()<CR>
+" function! ToggleWrap()
+"     let s:nowrap_cc_bg = [22, '#005f00']
+"     redir => s:curr_cc_hi
+"     silent hi ColorColumn
+"     redir END
+"     " following two lines not working now ...
+"     let s:curr_cc_ctermbg = matchstr(s:curr_cc_hi, 'ctermbg=\zs.\{-}\s\ze\1')
+"     let s:curr_cc_guibg = matchstr(s:curr_cc_hi, 'guibg=\zs.\{-}\_$\ze\1')
+"     if s:curr_cc_ctermbg != s:nowrap_cc_bg[0]
+"         let g:curr_cc_ctermbg = s:curr_cc_ctermbg
+"     endif
+"     if s:curr_cc_guibg != s:nowrap_cc_bg[1]
+"         let g:curr_cc_guibg = s:curr_cc_guibg
+"     endif
+"     if &textwidth == 80
+"         set textwidth=0
+"         exec 'hi ColorColumn ctermbg='.s:nowrap_cc_bg[0].
+"                     \' guibg='.s:nowrap_cc_bg[1]
+"     elseif &textwidth == 0
+"         set textwidth=80
+"         exec 'hi ColorColumn ctermbg='.g:curr_cc_ctermbg.
+"                     \' guibg='.g:curr_cc_guibg
+"     endif
+" endfunction
+" 
+" nmap <silent><Leader>ew :call ToggleWrap()<CR>
 
 " }}}
 
@@ -218,7 +225,6 @@ set noea
 " map <C-w><C-w> to maximize current window vertically
 noremap <C-w><C-w> <C-w>1000+
 
-
 set number
 set relativenumber
 
@@ -240,7 +246,8 @@ function! s:QuickfixToggle()
 endfunction
 command! ToggleQuickfix call <SID>QuickfixToggle()
 
-nnoremap <silent> <leader>q :ToggleQuickfix<CR>
+nnoremap <silent> <leader>eq :ToggleQuickfix<CR>
+let g:which_key_map_leader.e.q = 'Toggle quickfix'
 
 " }}}
 
@@ -255,4 +262,5 @@ endif
 " Show hidden chars
 nmap <leader>eh :set list!<CR>
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+let g:which_key_map_leader.e.h = 'hidden characters'
 

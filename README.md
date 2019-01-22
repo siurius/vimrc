@@ -58,17 +58,18 @@ In `modules/basic.vim`
 
 | Command              | Description                        | Plugin               |
 | :--------------      | :--------------------------------- | :------------------- |
+| `;`                  | Clear previous search highlight    |                      |
 | `<leader>eh`         | Toggle hidden characters           |                      |
-| `<leader>q`          | Toggle quickfix window             |                      |
+| `<leader>eq`         | Toggle quickfix window             |                      |
 | `:TC`                | Alias of `:tabclose`               |                      |
 | `Alt-.`              | Next fix                           | ALE                  |
 | `Alt-,`              | Previous fix                       | ALE                  |
-| `<leader>=`          | Auto format                        | ALE                  |
-| `<leader>r`          | Run async command                  | AsyncRun             |
-| `<leader>k`          | Kill async command                 | AsyncRun             |
-| `<leader>c`          | Toggle Codi                        | Codi                 |
+| `<leader>cf`         | Auto format                        | ALE                  |
+| `<leader>ra`         | Run async command                  | AsyncRun             |
+| `<leader>rk`         | Kill async command                 | AsyncRun             |
+| `<leader>rc`         | Toggle Codi                        | Codi                 |
 | `<F4>`               | Find in project                    | CtrlSF               |
-| `<leader>a`          | Find selected world in project     | CtrlSF               |
+| `<leader>a`          | Find selected word in project      | CtrlSF               |
 | `Ctrl-o`             | Open in a horizontal split window  | CtrlSF               |
 | `Ctrl-j`             | Move cursor to next match          | CtrlSF               |
 | `Ctrl-k`             | Move cursor to previous match      | CtrlSF               |
@@ -89,10 +90,10 @@ In `modules/basic.vim`
 | `:PlugUpdate`        | Install / update plugins           | vim-plug             |
 | `:PlugUpgrade`       | Upgrde vim-plug itself             | vim-plug             |
 | `<F3>`               | Toggle TagBar                      | TagBar               |
-| `<leader>s`          | Toggle slime                       | vim-slime            |
+| `<leader>rs`         | Toggle slime                       | vim-slime            |
 | `:YcmGenerateConfig` | Generate YCM config                | YCM-Generator        |
 | `:CCGenerateConfig`  | Generate color\_coded config       | YCM-Generator        |
-| `<leader>g`          | Goto definition else declaration   | YouCompleteMe        |
+| `<leader>cg`         | Goto definition else declaration   | YouCompleteMe        |
 
 ### color\_coded
 

@@ -11,6 +11,8 @@ map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+let g:EasyMotion_do_mapping=0
+
 " multiple cursors
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-m>'
