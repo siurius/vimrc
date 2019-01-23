@@ -26,7 +26,7 @@ nmap . <Plug>(ale_next_wrap)
 let g:ale_pattern_options = {
 \   '.*\.tex$': {'ale_enabled': 0},
 \}
-let g:which_key_map_leader.c.f = 'Auto formatting'
+let g:which_key_map_leader.c.f = 'auto formatting'
 
 " YouCompleteMe
 let g:ycm_server_keep_logfiles = 1
@@ -45,8 +45,8 @@ nnoremap <leader>cg  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
 " let g:ycm_filetype_blacklist = { 'haskell' : 1  }
-let g:which_key_map_leader.c.d = 'Show detailed diagnostics'
-let g:which_key_map_leader.c.g = 'Goto def. else dec.'
+let g:which_key_map_leader.c.d = 'show detailed diagnostics'
+let g:which_key_map_leader.c.g = 'goto def. else dec.'
 
 " YCM-Generator
 
@@ -58,7 +58,7 @@ nnoremap <leader>rc :Codi!!<CR>
 let g:codi#interpreters = {
             \ 'haskell': {'prompt': '^λ. '},
             \ }
-let g:which_key_map_leader.r.c = 'Codi (haskell)'
+let g:which_key_map_leader.r.c = 'codi'
 
 " neco-ghc
 " let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
@@ -67,9 +67,12 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " vim-slime
 let g:slime_target = "vimterminal"
-nmap <leader>rs :SlimeToggle<CR>
+let g:slime_no_mappings = 1
+xmap <c-c><c-c> <Plug>SlimeRegionSend
+nmap <c-c><c-c> <Plug>SlimeParagraphSend
+nmap <leader>rs <Plug>SlimeConfig
 let g:slime_vimterminal_config = {"term_rows":"15"}
-let g:which_key_map_leader.r.s = 'Slime'
+let g:which_key_map_leader.r.s = 'slime'
 
 " vim-hoogle
 function! HoogleToggle()

@@ -79,7 +79,7 @@ set noswapfile
 set backupdir=$HOME/.vim/tmp/backup/
 set undodir=$HOME/.vim/tmp/undo/
 set directory=$HOME/.vim/tmp/swap/
-set viminfo+=n$HOME/.vim/tmp/viminfo
+" set viminfo+=n$HOME/.vim/tmp/viminfo
 
 " make this dirs if no exists previously
 silent! call MakeDirIfNoExists(&undodir)
@@ -247,7 +247,7 @@ endfunction
 command! ToggleQuickfix call <SID>QuickfixToggle()
 
 nnoremap <silent> <leader>eq :ToggleQuickfix<CR>
-let g:which_key_map_leader.e.q = 'Toggle quickfix'
+let g:which_key_map_leader.e.q = 'toggle quickfix'
 
 " }}}
 

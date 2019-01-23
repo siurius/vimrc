@@ -16,3 +16,5 @@ Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
 " show marks
 Plug 'kshenoy/vim-signature'
+" sidebar for mark context
+Plug 'Yilin-Yang/vim-markbar'

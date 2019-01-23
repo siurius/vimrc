@@ -39,9 +39,9 @@ let g:which_key_map_leader.f = 'find file in project'
 nnoremap <leader>hf :History<CR>
 nnoremap <leader>hs :History/<CR>
 nnoremap <leader>hc :History:<CR>
-let g:which_key_map_leader.h.f = 'history file name'
-let g:which_key_map_leader.h.s = 'history search'
-let g:which_key_map_leader.h.c = 'history command'
+let g:which_key_map_leader.h.f = 'historical file name'
+let g:which_key_map_leader.h.s = 'historical search'
+let g:which_key_map_leader.h.c = 'historical command'
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
@@ -51,8 +51,8 @@ let g:gitgutter_map_keys = 0
 " AsyncRun
 nnoremap <leader>ra :AsyncRun<space>
 nnoremap <leader>rk :AsyncStop!<CR>
-let g:which_key_map_leader.r.a = 'Async run <command>'
-let g:which_key_map_leader.r.k = 'Async stop'
+let g:which_key_map_leader.r.a = 'async run <command>'
+let g:which_key_map_leader.r.k = 'async stop'
 
 " vim-which-key
 " NOTE: change here when changing leader or local leader

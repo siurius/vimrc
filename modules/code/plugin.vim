@@ -25,7 +25,7 @@ Plug 'bitc/lushtags'
 " haskell completion
 Plug 'eagletmt/neco-ghc'
 " vim-slime, select and run
-Plug 'siurius/vim-slime'
+Plug 'jpalardy/vim-slime'
 " haskell API reference
 Plug 'Twinside/vim-hoogle'
 "" TabNine completor
