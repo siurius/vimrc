@@ -9,11 +9,10 @@ scriptencoding utf-8
 " ALE
 let g:ale_linters = {
 \   'python': [],
-\   'haskell': ['ghc', 'hlint'],
+\   'haskell': ['stack ghc', 'stack hlint'],
 \}
 let g:ale_fixers = {
 \   'python': ['autopep8', 'yapf'],
-\   'haskell': ['hfmt'],
 \}
 " auto format
 nnoremap <leader>cf :ALEFix<CR>
@@ -55,15 +54,14 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 " Codi
 nnoremap <leader>rc :Codi!!<CR>
-let g:codi#interpreters = {
-            \ 'haskell': {'prompt': '^λ. '},
-            \ }
+" Codi not working with stack ghci
+" let g:codi#interpreters = {
+"             \ 'haskell': {
+"                 \ 'bin': ['stack', 'ghci'],
+"                 \ 'prompt': '^λ. ',
+"             \ },
+"         \ }
 let g:which_key_map_leader.r.c = 'codi'
-
-" neco-ghc
-" let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " vim-slime
 let g:slime_target = "vimterminal"
@@ -86,3 +84,12 @@ function! HoogleToggle()
 endfunction
 command -bar -nargs=0 HoogleToggle call HoogleToggle()
 nmap <F12> :HoogleToggle<CR>
+" use stack
+let g:hoogle_search_bin='stack hoogle'
+
+" removed
+" neco-ghc
+" let g:ycm_semantic_triggers = {'haskell' : ['re!.']}
+" let g:ycm_semantic_triggers = {'haskell' : ['.']}
+" autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+

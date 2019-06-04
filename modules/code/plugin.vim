@@ -16,17 +16,21 @@ Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'metakirby5/codi.vim'
 " haskell syntx highlight
 Plug 'neovimhaskell/haskell-vim'
-" vimproc, asynchronous execution library required by ghc-mod.vim and neco-ghc
-Plug 'Shougo/vimproc.vim'
-"" better haskell looking
-"Plug 'enomsg/vim-haskellConcealPlus'
 " haskell tagbar
 Plug 'bitc/lushtags'
-" haskell completion
-Plug 'eagletmt/neco-ghc'
 " vim-slime, select and run
 Plug 'jpalardy/vim-slime'
 " haskell API reference
 Plug 'Twinside/vim-hoogle'
-"" TabNine completor
-"Plug 'zxqfl/tabnine-vim'
+
+" removed
+" vimproc, asynchronous execution library required by neco-ghc, not required anymore
+" Plug 'Shougo/vimproc.vim'
+" REMOVE, require ghc-mod haskell completion
+" Plug 'eagletmt/neco-ghc'
+" better haskell looking
+" Plug 'enomsg/vim-haskellConcealPlus'
+" TabNine completor
+" Plug 'zxqfl/tabnine-vim'
+" TODO: try later LSP
+" Plug 'neoclide/coc.nvim'
