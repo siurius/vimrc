@@ -43,7 +43,7 @@ let g:ycm_key_detailed_diagnostics = '<leader>cd'
 nnoremap <leader>cg  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 " let g:ycm_filetype_specific_completion_to_disable = { 'python' : 1  }
-" let g:ycm_filetype_blacklist = { 'haskell' : 1  }
+let g:ycm_filetype_blacklist = { 'python' : 1 }
 let g:which_key_map_leader.c.d = 'show detailed diagnostics'
 let g:which_key_map_leader.c.g = 'goto def. else dec.'
 
@@ -86,6 +86,15 @@ command -bar -nargs=0 HoogleToggle call HoogleToggle()
 nmap <F12> :HoogleToggle<CR>
 " use stack
 let g:hoogle_search_bin='stack hoogle'
+
+" Kite
+let g:kite_auto_complete=1
+set completeopt-=menu
+set completeopt+=menuone   " Show the completions UI even with only 1 item
+set completeopt-=longest   " Don't insert the longest common text
+set completeopt+=preview   " Hide the documentation preview window
+set completeopt+=noinsert  " Don't insert text automatically
+set completeopt-=noselect  " Highlight the first completion automatically
 
 " removed
 " neco-ghc
