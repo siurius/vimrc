@@ -89,11 +89,11 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-" xmap <leader>a  <Plug>(coc-codeaction-selected)
-" nmap <leader>a  <Plug>(coc-codeaction-selected)
-" " Remap for do codeAction of current line
-" nmap <leader>ac  <Plug>(coc-codeaction)
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Remap for do codeAction of current line
+nmap <leader>al  <Plug>(coc-codeaction)
 " " Use <TAB> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 " nmap <silent> <TAB> <Plug>(coc-range-select)
 " xmap <silent> <TAB> <Plug>(coc-range-select)
@@ -134,7 +134,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 
-" snippests
+" coc-snippests
 imap <C-l> <Plug>(coc-snippets-expand)
 
 inoremap <silent><expr> <TAB>

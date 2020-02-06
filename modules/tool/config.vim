@@ -23,7 +23,7 @@ let g:tagbar_width = 40
 " ctrlsf.vim
 let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_winsize = '30%'
-vmap <leader>a <plug>CtrlSFVwordExec
+vmap <leader>w <plug>CtrlSFVwordExec
 map <F4> :CtrlSF -I<space>
 " TODO: 1. highlight result window
 "       2. line-wrap

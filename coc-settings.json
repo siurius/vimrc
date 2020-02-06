@@ -20,6 +20,34 @@
                     "directory": "/tmp/ccls"
                 }
             }
+        },
+        "haskell": {
+            "command": "hie-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                "*.cabal",
+                "stack.yaml",
+                "cabal.project",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {}
+            }
         }
-    }
+    },
+    "cSpell.enabled": true,
+    "cSpell.languageSettings": [
+        { "languageId": "*",      "local": "en",               "dictionaries": ["wordsEn"] },
+        { "languageId": "*",      "local": "en-US",            "dictionaries": ["wordsEn"] },
+        { "languageId": "*",      "local": "en-GB",            "dictionaries": ["wordsEnGb"] },
+        { "languageId": "*",                                   "dictionaries": ["companies", "softwareTerms", "misc"] },
+        { "languageId": "python", "allowCompoundWords": true,  "dictionaries": ["python"]},
+    ]
 }
