@@ -1,0 +1,32 @@
+[
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-I./include",
+            "-std=c++11",
+            "-O2",
+            "-g",
+            "-o",
+            "build/main.o",
+            "src/main.cc"
+        ],
+        "directory": "/home/siurius/source/vimrc/test/cpp",
+        "file": "src/main.cc"
+    },
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-I./include",
+            "-std=c++11",
+            "-O2",
+            "-g",
+            "-o",
+            "build/module.o",
+            "src/module.cc"
+        ],
+        "directory": "/home/siurius/source/vimrc/test/cpp",
+        "file": "src/module.cc"
+    }
+]

@@ -3,38 +3,9 @@ Vim configuration.
 
 ## Preparation
 
-### ALE
-
-ALE (Asynchronous Lint Engine) is a plugin for providing linting in NeoVim and Vim 8 while editing.
-
-- Python
-    - linter: `pylint`, `flake8`
-    - fixer: `autopep8`, `yapf`
-
 ### fzf
 
 Requires `fzf` in the system.
-
-### YouCompleteMe
-
-- Global
-    - libtinfo
-- Golang
-    - Go
-
-### Haskell support
-
-- ghc-mod
-- hfmt
-- hlint
-- lushtags
-
-### color\_coded
-
-- lua
-- llvm
-
-For complete list, see [README](https://github.com/jeaye/color_coded).
 
 ## Setup
 
@@ -44,11 +15,29 @@ For complete list, see [README](https://github.com/jeaye/color_coded).
     - Minimal: `let g:vimrc_modules=[]`
     - Complete: `let g:vimrc_modules=['ui', 'tool', 'code', 'edit']`
 3. `:PlugInstall`, then (if use `code`)
-    - YouCompleteMe: in root folder `./install.py --clang-completer --go-completer`
-    - Eclim
-    - vimproc: in plugin's root folder `make`
-    - color\_coded
 4. Restart vim
+
+## Configuration
+
+### Code completion engine
+
+#### coc.nvim
+
+- `C/C++`: install `ccls` from repositories ([ccls](https://github.com/MaskRay/ccls), [setup](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)).
+    - Project [configuration](https://github.com/MaskRay/ccls/wiki/Project-Setup) using extra file, [auto-generate](https://sarcasm.github.io/notes/dev/compilation-database.html) or `.ccls`
+    - Usually, `bear make` generates `compile_commands.json`
+- `Java`: type `:CocInstall coc-java` in vim ([coc-java](https://github.com/neoclide/coc-java))
+
+- snippet: `:CocInstall coc-snippets` ([coc-snippets](https://github.com/neoclide/coc-snippets))
+
+More extensions see [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+
+#### Kite
+
+Download from [Kite official][kite-official], install and adds vim support.
+
+[kite-official]: https://kite.com/integrations/vim/
+
 
 ## Usage
 
@@ -62,11 +51,26 @@ In `modules/basic.vim`
 | `<leader>eh`         | Toggle hidden characters           |                      |
 | `<leader>eq`         | Toggle quickfix window             |                      |
 | `:TC`                | Alias of `:tabclose`               |                      |
-| `Alt-.`              | Next fix                           | ALE                  |
-| `Alt-,`              | Previous fix                       | ALE                  |
-| `<leader>cf`         | Auto format                        | ALE                  |
 | `<leader>ra`         | Run async command                  | AsyncRun             |
 | `<leader>rk`         | Kill async command                 | AsyncRun             |
+| `Ctrl-<space>`       | Trigger completion                 | coc.vim              |
+| `Alt-.`              | Next fix                           | coc.vim              |
+| `Alt-,`              | Previous fix                       | coc.vim              |
+| `gd`                 | Goto definition                    | coc.vim              |
+| `gy`                 | Goto type declaration              | coc.vim              |
+| `gi`                 | Goto implementation                | coc.vim              |
+| `gr`                 | Goto references                    | coc.vim              |
+| `K`                  | Show documentation in preview      | coc.vim              |
+| `<leader>cf`         | Format selected region             | coc.vim              |
+| `<leader>qf`         | Fix autofix of current line        | coc.vim              |
+| `:Format`            | Format current buffer              | coc.vim              |
+| `:Fold`              | Fold current buffer                | coc.vim              |
+| `:OR`                | Organize import of current buffer  | coc.vim              |
+| `<space>a`           | Show all diagnostics               | coc.vim              |
+| `<space>e`           | Manage extensions                  | coc.vim              |
+| `<space>o`           | List symbols of current document   | coc.vim              |
+| `<space>s`           | Search worksypace for symbol       | coc.vim              |
+| `<space>p`           | Resume latest coc list             | coc.vim              |
 | `<leader>rc`         | Toggle Codi                        | Codi                 |
 | `<F4>`               | Find in project                    | CtrlSF               |
 | `<leader>a`          | Find selected word in project      | CtrlSF               |
@@ -91,9 +95,6 @@ In `modules/basic.vim`
 | `:PlugUpgrade`       | Upgrde vim-plug itself             | vim-plug             |
 | `<F3>`               | Toggle TagBar                      | TagBar               |
 | `<leader>rs`         | Toggle slime                       | vim-slime            |
-| `:YcmGenerateConfig` | Generate YCM config                | YCM-Generator        |
-| `:CCGenerateConfig`  | Generate color\_coded config       | YCM-Generator        |
-| `<leader>cg`         | Goto definition else declaration   | YouCompleteMe        |
 
 ### color\_coded
 
@@ -105,14 +106,57 @@ Requires adding `.color_coded` file in project root containing header folders, l
 
 ## Trouble shooting
 
-### Haskell, `The IO action ‘main’ is not defined in module ‘Main’`
+### `coc.nvim`
+
+***`:CocInstall` no response.*** Possible reason: `yarn` not working.
+
+First try to initialize the extension folder:
+```bash
+# ~/.config/coc/extensions/ by default
+cd ~/.config/coc/extensions/
+# yarn initialize
+yarn init
+```
+
+After initialization, `yarn` may still not working due to network issues. Try using proxy either by:
+
+1) manually
+```bash
+# at the extensions folder
+proxychains -q yarn add coc-java
+```
+2) setting up yarn proxy
+```bash
+# TODO
+```
+
+Execute `:CocList extensions` in vim, you should see installed extensions.
+
+***Keeping `jdt.ls not found`.*** Possible solution: download `jdt.ls` manually.
+
+Downloads latest version from [jdt.ls official snapshots][jdtls-snapshots] and extract to `~/.config/coc/extensions/coc-java-data/server/`
+
+
+[jdtls-snapshots]: http://download.eclipse.org/jdtls/snapshots/?d
+
+***Haskell, `The IO action ‘main’ is not defined in module ‘Main’`***
 
 See [this issue][haskell-main-not-defined]. Simply add `main = undefined` at the begining.
 
 [haskell-main-not-defined]: https://github.com/DanielG/ghc-mod/issues/781
 
+
 ## TODO
 
-1. Merge multiple files and create `view`
-2. Adds incsearch
-3. Lisp support
+1. Haskell, Lisp support
+2. Grammar checker
+3. Merge multiple files and create `view`
+
+
+### Haskell support
+
+- ghc-mod
+- hfmt
+- hlint
+- lushtags
+

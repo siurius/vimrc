@@ -6,22 +6,27 @@
 
 scriptencoding utf-8
 
-" Asynchronous Lint Engine 
-Plug 'w0rp/ale'
-" YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
-" YCM-Generator
-Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
+" {neo}vim LSP
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" vim snippets
+Plug 'honza/vim-snippets'
 " Codi, scratchpad
 Plug 'metakirby5/codi.vim'
-" haskell syntx highlight
-Plug 'neovimhaskell/haskell-vim'
-" haskell tagbar
-Plug 'bitc/lushtags'
 " vim-slime, select and run
 Plug 'jpalardy/vim-slime'
-" haskell API reference
-Plug 'Twinside/vim-hoogle'
+
+" " Asynchronous Lint Engine 
+" Plug 'w0rp/ale'
+" " YouCompleteMe
+" Plug 'Valloric/YouCompleteMe'
+" " YCM-Generator
+" Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
+" " haskell syntx highlight
+" Plug 'neovimhaskell/haskell-vim'
+" " haskell tagbar
+" Plug 'bitc/lushtags'
+" " haskell API reference
+" Plug 'Twinside/vim-hoogle'
 
 " removed
 " vimproc, asynchronous execution library required by neco-ghc, not required anymore
@@ -32,5 +37,3 @@ Plug 'Twinside/vim-hoogle'
 " Plug 'enomsg/vim-haskellConcealPlus'
 " TabNine completor
 " Plug 'zxqfl/tabnine-vim'
-" TODO: try later LSP
-" Plug 'neoclide/coc.nvim'

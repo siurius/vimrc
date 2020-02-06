@@ -219,7 +219,7 @@ command TC tabclose
 " }}}
 
 " change working directory
-set autochdir
+" set autochdir " due to ccls require relative folder
 " See 'equalalways' in the Vim documentation
 set noea
 " map <C-w><C-w> to maximize current window vertically

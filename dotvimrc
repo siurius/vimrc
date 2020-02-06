@@ -1,4 +1,5 @@
 let $VIMRC_DIR=$HOME."/source/vimrc"
+let $VIMCONFIG=$VIMRC_DIR
 let &runtimepath=substitute(&runtimepath, '^', $VIMRC_DIR.",", 'g')
 
 " Select the packages you need
