@@ -14,7 +14,7 @@ Requires `fzf` in the system.
 3. Change `g:vimrc_modules` in `dotvimrc`
     - Minimal: `let g:vimrc_modules=[]`
     - Complete: `let g:vimrc_modules=['ui', 'tool', 'code', 'edit']`
-3. `:PlugInstall`, then (if use `code`)
+3. `:PlugInstall`
 4. Restart vim
 
 ## Configuration
