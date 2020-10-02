@@ -7,6 +7,10 @@ Vim configuration.
 
 Requires `fzf` in the system.
 
+### ctrlsf
+
+Requires `ack` in the system.
+
 ## Setup
 
 1. Adds link from `~/.vimrc` to `dotvimrc`
