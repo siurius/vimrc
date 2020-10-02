@@ -1,4 +1,6 @@
-let $VIMRC_DIR=$HOME."/source/vimrc"
+if (empty($VIMRC_DIR))
+    let $VIMRC_DIR=$HOME."/.vimrc"
+endif
 let $VIMCONFIG=$VIMRC_DIR
 let &runtimepath=substitute(&runtimepath, '^', $VIMRC_DIR.",", 'g')
 

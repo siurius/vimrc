@@ -9,8 +9,8 @@ Requires `fzf` in the system.
 
 ## Setup
 
-1. Adds link from `~/.vim` to this folder and `~/.vimrc` to `dotvimrc`
-2. Change `$VIMRC_DIR` in `dotvimrc` to the path of this folder
+1. Adds link from `~/.vimrc` to `dotvimrc`
+2. Export `VIMRC_DIR` environmental variable to the path of this folder, in `.bashrc` or other places
 3. Change `g:vimrc_modules` in `dotvimrc`
     - Minimal: `let g:vimrc_modules=[]`
     - Complete: `let g:vimrc_modules=['ui', 'tool', 'code', 'edit']`
