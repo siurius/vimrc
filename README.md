@@ -31,7 +31,7 @@ Requires `ack` in the system.
     - Project [configuration](https://github.com/MaskRay/ccls/wiki/Project-Setup) using extra file, [auto-generate](https://sarcasm.github.io/notes/dev/compilation-database.html) or `.ccls`
     - Usually, `bear make` generates `compile_commands.json`
 - `Java`: type `:CocInstall coc-java` in vim ([coc-java](https://github.com/neoclide/coc-java))
-    - It will download [jdt.ls](download.eclipse.org/jdtls/snapshots/?d).
+    - It will download [jdt.ls](http://download.eclipse.org/jdtls/snapshots/?d).
 - `Haskell`: install [`HIE`](https://github.com/haskell/haskell-ide-engine)
     - Generating haddock documentation `stack haddock --keep-going` ([hover completion](https://github.com/haskell/haskell-ide-engine#docs-on-hovercompletion))
 
