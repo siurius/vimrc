@@ -153,6 +153,18 @@ See [this issue][haskell-main-not-defined]. Simply add `main = undefined` at the
 
 [haskell-main-not-defined]: https://github.com/DanielG/ghc-mod/issues/781
 
+***[coc.nvim] The "java" server crashed 5 times in the last 3 minutes. The server will not be restarted.***
+
+To restart language server quickly, `:CocRestart`.
+
+If the system uses jdk 1.8, try to change the language server version as [this issue](https://github.com/neoclide/coc-java/issues/99) suggests:
+1. download the language server v0.57.0 from https://download.eclipse.org/jdtls/milestones/0.57.0/ ;
+2. replace files in `~/.config/coc/extensions/coc-java-data/server`.
+
+If the system requires a higher version, the latest version should works well with jdk 11:
+1. download the latest version of language server;
+2. replace files in `~/.config/coc/extensions/coc-java-data/server`.
+3. clean the workspace cache in vim `:CocCommand java.clean.workspace` (according to [this post](https://www.reddit.com/r/neovim/comments/hwosq7/cocjava_the_java_server_crashed_5_times_in_the/)).
 
 ## TODO
 
