@@ -4,6 +4,9 @@ endif
 let $VIMCONFIG=$VIMRC_DIR
 let &runtimepath=substitute(&runtimepath, '^', $VIMRC_DIR.",", 'g')
 
+" add bin folder
+let $PATH .= ":".$VIMRC_DIR."/bin"
+
 " Select the packages you need
 let g:vimrc_modules=['ui', 'tool', 'code', 'edit']
 

@@ -11,6 +11,12 @@ Requires `fzf` in the system.
 
 Requires `ack` in the system.
 
+### Markdown Preview
+
+[Markdown Preview for (Neo)vim](https://github.com/iamcco/markdown-preview.nvim)
+
+Requires `firefox` (for private browsing), `nodejs` and `yarn` installed.
+
 ## Setup
 
 1. Adds link from `~/.vimrc` to `dotvimrc`
