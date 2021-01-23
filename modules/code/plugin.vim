@@ -14,8 +14,6 @@ Plug 'honza/vim-snippets'
 Plug 'metakirby5/codi.vim'
 " vim-slime, select and run
 Plug 'jpalardy/vim-slime'
-" Markdown Preview for (Neo)vim, with nodejs and yarn installed
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " " Asynchronous Lint Engine 
 " Plug 'w0rp/ale'

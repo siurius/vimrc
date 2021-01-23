@@ -18,3 +18,5 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
 " sidebar for mark context
 Plug 'Yilin-Yang/vim-markbar'
+" Markdown Preview for (Neo)vim, with nodejs and yarn installed
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }

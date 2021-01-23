@@ -11,11 +11,15 @@ Requires `fzf` in the system.
 
 Requires `ack` in the system.
 
-### Markdown Preview
+### Markdown preview
 
 [Markdown Preview for (Neo)vim](https://github.com/iamcco/markdown-preview.nvim)
 
 Requires `firefox` (for private browsing), `nodejs` and `yarn` installed.
+
+### Secret editing
+
+Requires `gpg` in the system.
 
 ## Setup
 
@@ -119,7 +123,13 @@ Requires adding `.color_coded` file in project root containing header folders, l
 -Iinclude
 ```
 
-## Trouble shooting
+## Editing Encrypted File
+
+When saving an encrypted file, the file is encrypted with the current recipient.
+
+`gpg-agent` caches the password of the secret key. `gpgconf --reload gpg-agent` clears the cache.
+
+## Trouble Shooting
 
 ### `coc.nvim`
 
