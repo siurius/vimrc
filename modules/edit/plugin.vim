@@ -20,3 +20,5 @@ Plug 'kshenoy/vim-signature'
 Plug 'Yilin-Yang/vim-markbar'
 " Markdown Preview for (Neo)vim, with nodejs and yarn installed
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+" automatic IM switcher
+Plug 'brglng/vim-im-select'

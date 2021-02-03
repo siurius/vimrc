@@ -131,3 +131,4 @@ augroup encrypted
   autocmd BufWritePost,FileWritePost *.md.asc redraw!
   autocmd BufWritePost,FileWritePost *.md.asc call cursor(w:cursor_pos[1], w:cursor_pos[2])
 augroup END
+
