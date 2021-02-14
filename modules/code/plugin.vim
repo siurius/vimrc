@@ -14,6 +14,8 @@ Plug 'honza/vim-snippets'
 Plug 'metakirby5/codi.vim'
 " vim-slime, select and run
 Plug 'jpalardy/vim-slime'
+" any-jump
+Plug 'pechorin/any-jump.vim'
 
 " " Asynchronous Lint Engine 
 " Plug 'w0rp/ale'

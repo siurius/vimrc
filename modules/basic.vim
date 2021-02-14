@@ -259,8 +259,19 @@ endif
 
 " }}}
 
-" Show hidden chars
+" folding setting {{{
+" open all folds by default
+
+set foldmethod=syntax
+set foldlevelstart=99
+
+" }}}
+
+" Show hidden chars {{{
+
 nmap <leader>eh :set list!<CR>
 set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 let g:which_key_map_leader.e.h = 'hidden characters'
+
+" }}}
 

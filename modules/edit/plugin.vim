@@ -18,6 +18,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
 " sidebar for mark context
 Plug 'Yilin-Yang/vim-markbar'
+" vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " Markdown Preview for (Neo)vim, with nodejs and yarn installed
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " automatic IM switcher

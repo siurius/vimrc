@@ -62,58 +62,69 @@ In `modules/basic.vim`
 - `leader`: `,`
 - `localleader`: ` `
 
-| Command         | Description                        | Plugin               |
-| :-------------- | :--------------------------------- | :------------------- |
-| `;`             | Clear previous search highlight    |                      |
-| `<leader>eh`    | Toggle hidden characters           |                      |
-| `<leader>eq`    | Toggle quickfix window             |                      |
-| `:TC`           | Alias of `:tabclose`               |                      |
-| `<leader>ra`    | Run async command                  | AsyncRun             |
-| `<leader>rk`    | Kill async command                 | AsyncRun             |
-| `Ctrl-<space>`  | Trigger completion                 | coc.vim              |
-| `Alt-.`         | Next fix                           | coc.vim              |
-| `Alt-,`         | Previous fix                       | coc.vim              |
-| `gd`            | Goto definition                    | coc.vim              |
-| `gy`            | Goto type declaration              | coc.vim              |
-| `gi`            | Goto implementation                | coc.vim              |
-| `gr`            | Goto references                    | coc.vim              |
-| `K`             | Show documentation in preview      | coc.vim              |
-| `<leader>a`     | Run codeAction for selected region | coc.vim              |
-| `<leader>al`    | Run codeAction for current line    | coc.vim              |
-| `<leader>cf`    | Format selected region             | coc.vim              |
-| `<leader>qf`    | Fix autofix of current line        | coc.vim              |
-| `:Format`       | Format current buffer              | coc.vim              |
-| `:Fold`         | Fold current buffer                | coc.vim              |
-| `:OR`           | Organize import of current buffer  | coc.vim              |
-| `<space>a`      | Show all diagnostics               | coc.vim              |
-| `<space>e`      | Manage extensions                  | coc.vim              |
-| `<space>o`      | List symbols of current document   | coc.vim              |
-| `<space>s`      | Search worksypace for symbol       | coc.vim              |
-| `<space>p`      | Resume latest coc list             | coc.vim              |
-| `<leader>rc`    | Toggle Codi                        | Codi                 |
-| `<F4>`          | Find in project                    | CtrlSF               |
-| `<leader>w`     | Find selected word in project      | CtrlSF               |
-| `Ctrl-o`        | Open in a horizontal split window  | CtrlSF               |
-| `Ctrl-j`        | Move cursor to next match          | CtrlSF               |
-| `Ctrl-k`        | Move cursor to previous match      | CtrlSF               |
-| `Ctrl-x Ctrl-l` | Complete line                      | fzf                  |
-| `Ctrl-x Ctrl-f` | Complete path                      | fzf                  |
-| `Ctrl-l`        | Show file in split window          | fzf                  |
-| `Ctrl-v`        | Show file in vsplit window         | fzf                  |
-| `<leader>f`     | Search file name from project root | fzf                  |
-| `<leader>hf`    | Search history file name           | fzf                  |
-| `<leader>hs`    | Search history search              | fzf                  |
-| `<leader>hc`    | Search history command             | fzf                  |
-| `<F12>`         | Toggle hoogle                      | vim-hoogle           |
-| `Ctrl-m`        | Multi cursor mark                  | vim-multiple-cursors |
-| `Ctrl-]`        | Multi cursor skip                  | vim-multiple-cursors |
-| `Ctrl-[`        | Multi cursor previous              | vim-multiple-cursors |
-| `<F2>`          | Toggle NERDTree                    | NERDTree             |
-| `:PlugInstall`  | Install plugins                    | vim-plug             |
-| `:PlugUpdate`   | Install / update plugins           | vim-plug             |
-| `:PlugUpgrade`  | Upgrde vim-plug itself             | vim-plug             |
-| `<F3>`          | Toggle TagBar                      | TagBar               |
-| `<leader>rs`    | Toggle slime                       | vim-slime            |
+| Command                 | Description                        | Plugin               |
+|:------------------------|:-----------------------------------|:---------------------|
+| `;`                     | Clear previous search highlight    |                      |
+| `<leader>eh`            | Toggle hidden characters           |                      |
+| `<leader>eq`            | Toggle quickfix window             |                      |
+| `:TC`                   | Alias of `:tabclose`               |                      |
+| `<leader>ra`            | Run async command                  | AsyncRun             |
+| `<leader>rk`            | Kill async command                 | AsyncRun             |
+| `Ctrl-<space>`          | Trigger completion                 | coc.vim              |
+| `Alt-.`                 | Next fix                           | coc.vim              |
+| `Alt-,`                 | Previous fix                       | coc.vim              |
+| `gd`                    | Goto definition                    | coc.vim              |
+| `gy`                    | Goto type declaration              | coc.vim              |
+| `gi`                    | Goto implementation                | coc.vim              |
+| `gr`                    | Goto references                    | coc.vim              |
+| `K`                     | Show documentation in preview      | coc.vim              |
+| `<leader>a`             | Run codeAction for selected region | coc.vim              |
+| `<leader>al`            | Run codeAction for current line    | coc.vim              |
+| `<leader>cf`            | Format selected region             | coc.vim              |
+| `<leader>qf`            | Fix autofix of current line        | coc.vim              |
+| `:Format`               | Format current buffer              | coc.vim              |
+| `:Fold`                 | Fold current buffer                | coc.vim              |
+| `:OR`                   | Organize import of current buffer  | coc.vim              |
+| `<space>a`              | Show all diagnostics               | coc.vim              |
+| `<space>e`              | Manage extensions                  | coc.vim              |
+| `<space>o`              | List symbols of current document   | coc.vim              |
+| `<space>s`              | Search worksypace for symbol       | coc.vim              |
+| `<space>p`              | Resume latest coc list             | coc.vim              |
+| `<leader>`j             | Search current token               | any-jump.vim         |
+| `:AnyJump`              | Search current token               | any-jump.vim         |
+| `:AnyJumpArg <keyword>` | Find keyword                       | any-jump.vim         |
+| `<leader>rc`            | Toggle Codi                        | Codi                 |
+| `<F4> <keyword>`        | Find in project                    | CtrlSF               |
+| `<leader>w`             | Find selected word in project      | CtrlSF               |
+| `Ctrl-o`                | Open in a horizontal split window  | CtrlSF               |
+| `Ctrl-j`                | Move cursor to next match          | CtrlSF               |
+| `Ctrl-k`                | Move cursor to previous match      | CtrlSF               |
+| `Ctrl-x Ctrl-l`         | Complete line                      | fzf                  |
+| `Ctrl-x Ctrl-f`         | Complete path                      | fzf                  |
+| `Ctrl-l`                | Show file in split window          | fzf                  |
+| `Ctrl-v`                | Show file in vsplit window         | fzf                  |
+| `<leader>f`             | Search file name from project root | fzf                  |
+| `<leader>hf`            | Search history file name           | fzf                  |
+| `<leader>hs`            | Search history search              | fzf                  |
+| `<leader>hc`            | Search history command             | fzf                  |
+| `<F12>`                 | Toggle hoogle                      | vim-hoogle           |
+| `Ctrl-m`                | Multi cursor mark                  | vim-multiple-cursors |
+| `Ctrl-]`                | Multi cursor skip                  | vim-multiple-cursors |
+| `Ctrl-[`                | Multi cursor previous              | vim-multiple-cursors |
+| `<F2>`                  | Toggle NERDTree                    | NERDTree             |
+| `:PlugInstall`          | Install plugins                    | vim-plug             |
+| `:PlugUpdate`           | Install / update plugins           | vim-plug             |
+| `:PlugUpgrade`          | Upgrde vim-plug itself             | vim-plug             |
+| `<F3>`                  | Toggle TagBar                      | TagBar               |
+| `:TableFormat`          | Format markdown table              | vim-markdown         |
+| `:Toc`                  | Open table of content              | vim-markdown         |
+| `]]`                    | Go to next header                  | vim-markdown         |
+| `[[`                    | Go to previous header              | vim-markdown         |
+| `][`                    | Go to next sibling header          | vim-markdown         |
+| `[]`                    | Go to previous sibling header      | vim-markdown         |
+| `]u`                    | Go to current header               | vim-markdown         |
+| `]p`                    | Go to parent header                | vim-markdown         |
+| `<leader>rs`            | Toggle slime                       | vim-slime            |
 
 ### color\_coded
 
