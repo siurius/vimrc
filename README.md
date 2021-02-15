@@ -21,6 +21,10 @@ Requires `firefox` (for private browsing), `nodejs` and `yarn` installed.
 
 Requires `gpg` in the system.
 
+### any-jump
+
+Requires `ag` (`the_silver_searcher` in alpinelinux) for code search.
+
 ## Setup
 
 1. Adds link from `~/.vimrc` to `dotvimrc`
