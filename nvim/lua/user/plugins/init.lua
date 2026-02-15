@@ -433,6 +433,7 @@ return {
         { "<leader>c", group = "code" },
         { "<leader>r", group = "run/toggle" },
         { "<leader>e", group = "enable-disable" },
+        { "<leader>a", group = "AI" },
       })
     end,
   },
@@ -546,5 +547,118 @@ return {
     keys = {
       { "<F3>", "<cmd>TagbarToggle<CR>", desc = "Toggle tagbar" },
     },
+  },
+
+  -----------------------------------------------------------------------------
+  -- AI (Code Companion with ACP)
+  -----------------------------------------------------------------------------
+  {
+    "olimorris/codecompanion.nvim",
+    version = "^18.0.0",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    cmd = {
+      "CodeCompanion",
+      "CodeCompanionChat",
+      "CodeCompanionActions",
+      "CodeCompanionCmd",
+    },
+    keys = {
+      -- Action Palette
+      { "<leader>aa", "<cmd>CodeCompanionActions<CR>", desc = "AI Action Palette", mode = { "n", "v" } },
+      -- Chat
+      { "<leader>ac", "<cmd>CodeCompanionChat<CR>", desc = "AI Chat" },
+      -- Inline Assistant (works with visual selection)
+      { "<leader>ai", "<cmd>CodeCompanion<CR>", desc = "AI Inline Assistant", mode = { "n", "v" } },
+      -- Toggle chat
+      { "<leader>at", "<cmd>CodeCompanionChat toggle<CR>", desc = "AI Toggle Chat" },
+    },
+    config = function()
+      -- Load .env file (recursive upward search like python-dotenv)
+      local function load_dotenv()
+        local current = vim.fn.getcwd()
+        while current ~= "/" do
+          local env_file = current .. "/.env"
+          if vim.fn.filereadable(env_file) == 1 then
+            for line in io.lines(env_file) do
+              local key, value = line:match("^([%w_]+)=(.+)$")
+              if key and value then
+                value = value:match("^['\"]?(.-)['\"]?$") or value
+                vim.env[key] = value
+              end
+            end
+            return true
+          end
+          current = vim.fn.fnamemodify(current, ":h")
+        end
+        return false
+      end
+      load_dotenv()
+
+      require("codecompanion").setup({
+        adapters = {
+          http = {
+            my_openai = function()
+              return require("codecompanion.adapters").extend("openai", {
+                name = "my_openai",
+                formatted_name = "Custom OpenAI",
+                url = (vim.env.OPENAI_BASE_URL or "") .. "/chat/completions",
+                env = {
+                  api_key = "OPENAI_API_KEY",
+                },
+                schema = {
+                  model = {
+                    default = vim.env.OPENAI_MODEL or "gpt-4o",
+                  },
+                },
+              })
+            end,
+          },
+          -- OpenCode: Built-in ACP adapter
+          opencode = function()
+            return require("codecompanion.adapters").extend("acp", {
+              name = "opencode",
+              formatted_name = "OpenCode",
+              commands = {
+                default = { "opencode", "acp" },
+              },
+              defaults = {
+                timeout = 60000,  -- 60 seconds for longer operations
+              },
+            })
+          end,
+          -- OpenHands: Custom ACP adapter (not built-in)
+          openhands = function()
+            return {
+              name = "openhands",
+              formatted_name = "OpenHands",
+              type = "acp",
+              commands = {
+                default = { "uvx", "--python", "3.12", "openhands", "acp" },
+              },
+              defaults = {
+                timeout = 60000,  -- 60 seconds for longer operations
+              },
+            }
+          end,
+        },
+        interactions = {
+          chat = { adapter = "opencode" },  -- Default to OpenCode
+          inline = { adapter = "my_openai" },
+        },
+        display = {
+          chat = {
+            window = {
+              position = "right",  -- left|right|top|bottom
+            },
+          },
+        },
+        opts = {
+          log_level = "INFO",  -- Set to "DEBUG" for troubleshooting
+        },
+      })
+    end,
   },
 }

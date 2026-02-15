@@ -133,6 +133,53 @@ Leader key: `,` (comma)
 | `<leader>r` | Run/toggle |
 | `<leader>e` | Enable/disable |
 
+## AI Assistant (CodeCompanion)
+
+CodeCompanion provides AI-powered coding assistance with support for multiple backends.
+
+### Setup
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` with your API credentials:
+   ```bash
+   OPENAI_BASE_URL=https://your-api-endpoint/v1
+   OPENAI_API_KEY=your-api-key
+   OPENAI_MODEL=your-model-name
+   ```
+
+### Keybindings
+
+| Key | Mode | Action |
+|-----|------|--------|
+| `<leader>aa` | n, v | AI Action Palette |
+| `<leader>ac` | n | Open AI Chat |
+| `<leader>ai` | n, v | Inline Assistant (ask about code) |
+| `<leader>at` | n | Toggle Chat |
+
+### Chat Keybindings
+
+| Key | Action |
+|-----|--------|
+| `<CR>` / `<C-s>` | Send message |
+| `<C-c>` | Close chat |
+| `?` | Show options |
+| `ga` | Change adapter |
+| `gr` | Regenerate response |
+
+### Adapters
+
+| Adapter | Type | Usage |
+|---------|------|-------|
+| OpenCode | ACP | Chat (default) |
+| OpenHands | ACP | Chat (via `ga`) |
+| Custom OpenAI | HTTP | Inline assistant |
+
+The `.env` file is automatically loaded (recursive upward search from current directory).
+
 ## Plugins
 
 | Category | Plugin |

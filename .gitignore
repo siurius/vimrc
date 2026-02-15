@@ -3,3 +3,4 @@ plugged/
 yarn.lock
 .ccls-cache
 node_modules
+.env
