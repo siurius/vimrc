@@ -83,13 +83,14 @@ In Neovim, run `:Mason` to install language servers:
 | `<leader>os` | Search history |
 | `<leader>oc` | Command history |
 
-### LSP
+### LSP and Coding
 
 | Key | Action |
 |-----|--------|
 | `gd` | Go to definition |
 | `gr` | Go to references |
 | `gi` | Go to implementation |
+| `gp` | Show diagnostic popup |
 | `K` | Show documentation |
 | `<leader>rn` | Rename symbol |
 | `<leader>cf` | Format code |
