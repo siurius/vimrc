@@ -175,7 +175,8 @@ CodeCompanion provides AI-powered coding assistance with support for multiple ba
 
 | Adapter | Type | Usage |
 |---------|------|-------|
-| OpenCode | ACP | Chat (default) |
+| Grok | ACP | Chat (default) |
+| OpenCode | ACP | Chat (via `ga`) |
 | OpenHands | ACP | Chat (via `ga`) |
 | Custom OpenAI | HTTP | Inline assistant |
 

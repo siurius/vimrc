@@ -616,36 +616,82 @@ return {
               })
             end,
           },
-          -- OpenCode: Built-in ACP adapter
-          opencode = function()
-            return require("codecompanion.adapters").extend("acp", {
-              name = "opencode",
-              formatted_name = "OpenCode",
-              commands = {
-                default = { "opencode", "acp" },
-              },
-              defaults = {
-                timeout = 60000,  -- 60 seconds for longer operations
-              },
-            })
-          end,
-          -- OpenHands: Custom ACP adapter (not built-in)
-          openhands = function()
-            return {
-              name = "openhands",
-              formatted_name = "OpenHands",
-              type = "acp",
-              commands = {
-                default = { "uvx", "--python", "3.12", "openhands", "acp" },
-              },
-              defaults = {
-                timeout = 60000,  -- 60 seconds for longer operations
-              },
-            }
-          end,
+          acp = {
+            -- Grok CLI over ACP (same login as `grok` / ~/.grok/auth.json)
+            grok = function()
+              return {
+                name = "grok",
+                formatted_name = "Grok",
+                type = "acp",
+                roles = {
+                  llm = "assistant",
+                  user = "user",
+                },
+                commands = {
+                  default = {
+                    vim.fn.expand("~/.grok/bin/grok"),
+                    "agent",
+                    "stdio",
+                  },
+                },
+                defaults = {
+                  mcpServers = {},
+                  timeout = 60000,
+                },
+                parameters = {
+                  protocolVersion = 1,
+                  clientCapabilities = {
+                    fs = { readTextFile = true, writeTextFile = true },
+                  },
+                  clientInfo = {
+                    name = "CodeCompanion.nvim",
+                    version = "1.0.0",
+                  },
+                },
+                handlers = {
+                  setup = function()
+                    return true
+                  end,
+                  auth = function()
+                    return true
+                  end,
+                  form_messages = function(self, messages, capabilities)
+                    return require("codecompanion.adapters.acp.helpers").form_messages(self, messages, capabilities)
+                  end,
+                },
+              }
+            end,
+            -- OpenCode: Built-in ACP adapter
+            opencode = function()
+              return require("codecompanion.adapters").extend("acp", {
+                name = "opencode",
+                formatted_name = "OpenCode",
+                commands = {
+                  default = { "opencode", "acp" },
+                },
+                defaults = {
+                  timeout = 60000,  -- 60 seconds for longer operations
+                },
+              })
+            end,
+            -- OpenHands: Custom ACP adapter (not built-in)
+            openhands = function()
+              return {
+                name = "openhands",
+                formatted_name = "OpenHands",
+                type = "acp",
+                commands = {
+                  default = { "uvx", "--python", "3.12", "openhands", "acp" },
+                },
+                defaults = {
+                  timeout = 60000,  -- 60 seconds for longer operations
+                },
+              }
+            end,
+          },
         },
         interactions = {
-          chat = { adapter = "opencode" },  -- Default to OpenCode
+          chat = { adapter = "grok" },
           inline = { adapter = "my_openai" },
         },
         display = {
